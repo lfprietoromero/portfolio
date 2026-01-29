@@ -1,0 +1,92 @@
+{
+  "nav": {
+    "about": "About",
+    "experience": "Experience",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "title": "DevOps",
+    "subtitle": "Building scalable infrastructure and automating the future",
+    "cta": "Get in Touch"
+  },
+  "about": {
+    "title": "About Me",
+    "description": "DevOps professional with experience in Linux systems and production environments, specialized in deployment automation, containers, and change traceability. Experience collaborating with development teams to ensure stability, quality, and service continuity through CI/CD practices.",
+    "mission": "My approach focuses on continuous integration, process automation, and critical systems maintenance, applying production-oriented best practices and ensuring application availability in corporate environments."
+  },
+  "skills": {
+    "title": "Skills & Technologies",
+    "categories": {
+      "cloud": "Cloud Platforms",
+      "containers": "Containers & Orchestration",
+      "cicd": "CI/CD & Automation",
+      "iac": "Infrastructure as Code",
+      "monitoring": "Monitoring & Logging",
+      "tools": "Tools & Languages"
+    }
+  },
+  "experience": {
+    "title": "Experience",
+    "jobs": [
+      {
+        "title": "Software Developer and DevOps",
+        "company": "Zaitec",
+        "period": "March 2025 - June 2025",
+        "description": "Participation in the definition, execution, and monitoring of CI/CD pipelines. Integration of version control and deployment traceability aligned with Jira.",
+        "highlights": [
+          "Definition, execution, and monitoring of CI/CD pipelines",
+          "Integration of version control and deployment traceability aligned with Jira",
+          "Collaboration in operational tasks related to deployments and environment stability",
+          "Application of production-oriented best practices"
+        ]
+      },
+      {
+        "title": "Systems and Implementation Technician",
+        "company": "Berger-Levrault",
+        "period": "September 2021 - November 2024",
+        "description": "Administration and maintenance of Linux systems (Debian) and Tomcat servers, ensuring application availability in production environments. Management of Docker containers and associated services for corporate applications.",
+        "highlights": [
+          "Administration and maintenance of Linux systems (Debian) and Tomcat servers in production",
+          "Management of Docker containers and associated services for corporate applications",
+          "Implementation, configuration, and support of software in public administrations",
+          "Evolutionary and corrective maintenance of proprietary applications",
+          "Support and maintenance of PL/SQL databases",
+          "Technical incident resolution prioritizing stability and service continuity"
+        ]
+      },
+      {
+        "title": "Systems Technician",
+        "company": "Netec",
+        "period": "September 2017 - December 2017",
+        "description": "Installation, configuration, and maintenance of computer equipment in corporate environments. Deployment of operating systems and software, ensuring proper functionality and stability.",
+        "highlights": [
+          "Installation, configuration, and maintenance of computer equipment",
+          "Deployment of operating systems and software",
+          "Basic configuration of local networks and connectivity",
+          "Management and verification of backups",
+          "Technical support to users and first-level incident resolution"
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "items": [
+      {
+        "name": "Coming Soon",
+        "description": "I'm working on new projects that will be available here soon.",
+        "technologies": [],
+        "link": ""
+      }
+    ]
+  },
+  "contact": {
+    "title": "Let's Work Together",
+    "description": "Interested in collaborating or discussing DevOps best practices? Feel free to reach out!",
+    "email": "Email",
+    "github": "GitHub",
+    "linkedin": "LinkedIn"
+  }
+}

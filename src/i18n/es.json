@@ -1,0 +1,92 @@
+{
+  "nav": {
+    "about": "Acerca de",
+    "experience": "Experiencia",
+    "projects": "Proyectos",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "greeting": "Hola, soy",
+    "title": "DevOps",
+    "subtitle": "Construyendo infraestructura escalable y automatizando el futuro",
+    "cta": "Contáctame"
+  },
+  "about": {
+    "title": "Sobre Mí",
+    "description": "Profesional DevOps con experiencia en sistemas Linux y entornos productivos, especializado en automatización de despliegues, contenedores y trazabilidad de cambios. Experiencia colaborando con equipos de desarrollo para garantizar estabilidad, calidad y continuidad del servicio mediante prácticas CI/CD.",
+    "mission": "Mi enfoque se centra en la integración continua, la automatización de procesos y el mantenimiento de sistemas críticos, aplicando buenas prácticas orientadas a producción y garantizando la disponibilidad de las aplicaciones en entornos corporativos."
+  },
+  "skills": {
+    "title": "Habilidades y Tecnologías",
+    "categories": {
+      "cloud": "Plataformas Cloud",
+      "containers": "Contenedores y Orquestación",
+      "cicd": "CI/CD y Automatización",
+      "iac": "Infraestructura como Código",
+      "monitoring": "Monitoreo y Logging",
+      "tools": "Herramientas y Lenguajes"
+    }
+  },
+  "experience": {
+    "title": "Experiencia",
+    "jobs": [
+      {
+        "title": "Desarrollador de Software y DevOps",
+        "company": "Zaitec",
+        "period": "Marzo 2025 - Junio 2025",
+        "description": "Participación en la definición, ejecución y seguimiento de pipelines CI/CD. Integración de control de versiones y trazabilidad de despliegues alineados con Jira.",
+        "highlights": [
+          "Definición, ejecución y seguimiento de pipelines CI/CD",
+          "Integración de control de versiones y trazabilidad de despliegues alineados con Jira",
+          "Colaboración en tareas operativas relacionadas con despliegues y estabilidad del entorno",
+          "Aplicación de buenas prácticas orientadas a producción"
+        ]
+      },
+      {
+        "title": "Técnico de Sistemas e Implantaciones",
+        "company": "Berger-Levrault",
+        "period": "Septiembre 2021 - Noviembre 2024",
+        "description": "Administración y mantenimiento de sistemas Linux (Debian) y servidores Tomcat, asegurando la disponibilidad de aplicaciones en entornos productivos. Gestión de contenedores Docker y servicios asociados para aplicaciones corporativas.",
+        "highlights": [
+          "Administración y mantenimiento de sistemas Linux (Debian) y servidores Tomcat en producción",
+          "Gestión de contenedores Docker y servicios asociados para aplicaciones corporativas",
+          "Implantación, configuración y soporte de software en administraciones públicas",
+          "Mantenimiento evolutivo y correctivo de aplicaciones propias",
+          "Soporte y mantenimiento de bases de datos PL/SQL",
+          "Resolución de incidencias técnicas priorizando estabilidad y continuidad del servicio"
+        ]
+      },
+      {
+        "title": "Técnico de Sistemas",
+        "company": "Netec",
+        "period": "Septiembre 2017 - Diciembre 2017",
+        "description": "Instalación, configuración y mantenimiento de equipos informáticos en entornos corporativos. Despliegue de sistemas operativos y software, asegurando su correcto funcionamiento y estabilidad.",
+        "highlights": [
+          "Instalación, configuración y mantenimiento de equipos informáticos",
+          "Despliegue de sistemas operativos y software",
+          "Configuración básica de redes locales y conectividad",
+          "Gestión y verificación de copias de seguridad",
+          "Soporte técnico a usuarios y resolución de incidencias de primer nivel"
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "title": "Proyectos Destacados",
+    "items": [
+      {
+        "name": "Próximamente",
+        "description": "Estoy trabajando en nuevos proyectos que pronto estarán disponibles aquí.",
+        "technologies": [],
+        "link": ""
+      }
+    ]
+  },
+  "contact": {
+    "title": "Trabajemos Juntos",
+    "description": "¿Interesado en colaborar o discutir mejores prácticas DevOps? ¡No dudes en contactarme!",
+    "email": "Correo",
+    "github": "GitHub",
+    "linkedin": "LinkedIn"
+  }
+}
