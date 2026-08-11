@@ -46,29 +46,32 @@ export const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 px-6 bg-surface-light dark:bg-surface-dark">
+    <section id="contact" className="py-20 px-6 bg-surface border-y border-border">
       <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-4xl font-bold text-text-primary-light dark:text-text-primary-dark mb-6">
+        <p className="font-mono text-xs uppercase tracking-widest text-primary mb-3">
+          contact/
+        </p>
+        <h2 className="font-display text-3xl md:text-4xl font-semibold text-paper mb-6">
           {t.contact.title}
         </h2>
 
-        <p className="text-lg text-text-secondary-light dark:text-text-secondary-dark mb-12">
+        <p className="font-body text-lg text-muted mb-12">
           {t.contact.description}
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {contacts.map((contact, index) => (
             <a
               key={index}
               href={contact.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-6 bg-background-light dark:bg-background-dark rounded-lg border border-gray-200 dark:border-gray-800 hover:border-primary-light dark:hover:border-primary-dark transition-all duration-300 hover:transform hover:scale-105"
+              className="p-6 bg-background rounded-lg border border-border hover:border-primary transition-all duration-300 hover:transform hover:scale-105"
             >
-              <div className="flex justify-center mb-4 text-primary-light dark:text-primary-dark">
+              <div className="flex justify-center mb-4 text-primary">
                 {contact.icon}
               </div>
-              <h3 className="text-lg font-semibold text-text-primary-light dark:text-text-primary-dark">
+              <h3 className="font-mono text-sm uppercase tracking-wider text-paper">
                 {contact.name}
               </h3>
             </a>

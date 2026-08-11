@@ -8,32 +8,23 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: {
-          light: '#3b82f6',
-          dark: '#60a5fa',
-        },
-        background: {
-          light: '#ffffff',
-          dark: '#0f172a',
-        },
-        surface: {
-          light: '#f8fafc',
-          dark: '#1e293b',
-        },
-        text: {
-          primary: {
-            light: '#0f172a',
-            dark: '#f1f5f9',
-          },
-          secondary: {
-            light: '#475569',
-            dark: '#cbd5e1',
-          },
-        },
+        primary: '#3FB8AF',
+        ember: '#E8A33D',
+        background: '#0B0F14',
+        surface: '#111826',
+        border: '#1E2836',
+        paper: '#F7F7F4',
+        muted: '#8B98A8',
+      },
+      fontFamily: {
+        display: ['"Space Grotesk"', 'sans-serif'],
+        body: ['"IBM Plex Sans"', 'sans-serif'],
+        mono: ['"JetBrains Mono"', 'monospace'],
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',
         'slide-up': 'slideUp 0.5s ease-out',
+        'pulse-dot': 'pulseDot 2s ease-in-out infinite',
       },
       keyframes: {
         fadeIn: {
@@ -43,6 +34,10 @@ export default {
         slideUp: {
           '0%': { transform: 'translateY(20px)', opacity: '0' },
           '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+        pulseDot: {
+          '0%, 100%': { opacity: '1', transform: 'scale(1)' },
+          '50%': { opacity: '0.5', transform: 'scale(0.85)' },
         },
       },
     },

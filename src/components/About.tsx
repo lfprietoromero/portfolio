@@ -4,13 +4,16 @@ export const About = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="about" className="py-20 px-6 bg-surface-light dark:bg-surface-dark">
+    <section id="about" className="py-20 px-6 bg-surface border-y border-border">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-4xl font-bold text-text-primary-light dark:text-text-primary-dark mb-12 text-center">
+        <p className="font-mono text-xs uppercase tracking-widest text-primary mb-3 text-center">
+          about/
+        </p>
+        <h2 className="font-display text-3xl md:text-4xl font-semibold text-paper mb-12 text-center">
           {t.about.title}
         </h2>
 
-        <div className="space-y-6 text-lg text-text-secondary-light dark:text-text-secondary-dark">
+        <div className="space-y-6 text-lg font-body text-muted">
           <p className="leading-relaxed">
             {t.about.description}
           </p>

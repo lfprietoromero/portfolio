@@ -6,7 +6,7 @@ export const LanguageToggle = () => {
   return (
     <button
       onClick={toggleLanguage}
-      className="px-3 py-2 rounded-lg font-medium transition-all duration-300 hover:bg-surface-light dark:hover:bg-surface-dark text-text-primary-light dark:text-text-primary-dark"
+      className="px-3 py-1.5 rounded-md border border-border font-mono text-xs uppercase tracking-wider text-muted hover:text-primary hover:border-primary transition-colors"
       aria-label="Toggle language"
     >
       {language === 'en' ? 'EN' : 'ES'}

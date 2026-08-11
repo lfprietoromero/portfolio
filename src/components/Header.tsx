@@ -1,6 +1,12 @@
-import { ThemeToggle } from './ThemeToggle';
 import { LanguageToggle } from './LanguageToggle';
 import { useLanguage } from '../contexts/LanguageContext';
+
+const NAV_ITEMS = [
+  { id: 'about', labelKey: 'about' },
+  { id: 'experience', labelKey: 'experience' },
+  { id: 'projects', labelKey: 'projects' },
+  { id: 'contact', labelKey: 'contact' },
+] as const;
 
 export const Header = () => {
   const { t } = useLanguage();
@@ -13,44 +19,29 @@ export const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/85 backdrop-blur-md border-b border-border">
       <nav className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <div className="text-2xl font-bold text-text-primary-light dark:text-text-primary-dark">
+          <div className="font-display text-lg md:text-xl font-semibold text-paper">
             Luis Fernando Prieto Romero
           </div>
 
           <div className="flex items-center gap-8">
-            <div className="hidden md:flex items-center gap-6">
-              <button
-                onClick={() => scrollToSection('about')}
-                className="text-text-secondary-light dark:text-text-secondary-dark hover:text-primary-light dark:hover:text-primary-dark transition-colors"
-              >
-                {t.nav.about}
-              </button>
-              <button
-                onClick={() => scrollToSection('experience')}
-                className="text-text-secondary-light dark:text-text-secondary-dark hover:text-primary-light dark:hover:text-primary-dark transition-colors"
-              >
-                {t.nav.experience}
-              </button>
-              <button
-                onClick={() => scrollToSection('projects')}
-                className="text-text-secondary-light dark:text-text-secondary-dark hover:text-primary-light dark:hover:text-primary-dark transition-colors"
-              >
-                {t.nav.projects}
-              </button>
-              <button
-                onClick={() => scrollToSection('contact')}
-                className="text-text-secondary-light dark:text-text-secondary-dark hover:text-primary-light dark:hover:text-primary-dark transition-colors"
-              >
-                {t.nav.contact}
-              </button>
+            <div className="hidden md:flex items-center gap-6 font-mono text-xs uppercase tracking-wider">
+              {NAV_ITEMS.map((item) => (
+                <button
+                  key={item.id}
+                  onClick={() => scrollToSection(item.id)}
+                  aria-label={t.nav[item.labelKey]}
+                  className="text-muted hover:text-primary transition-colors"
+                >
+                  {item.id}/
+                </button>
+              ))}
             </div>
 
             <div className="flex items-center gap-2">
               <LanguageToggle />
-              <ThemeToggle />
             </div>
           </div>
         </div>

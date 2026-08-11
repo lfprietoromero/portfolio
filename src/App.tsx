@@ -10,7 +10,7 @@ import { LanguageProvider } from './contexts/LanguageContext';
 function App() {
   return (
     <LanguageProvider>
-      <div className="min-h-screen bg-background-light dark:bg-background-dark transition-colors duration-300">
+      <div className="min-h-screen bg-background font-body">
         <Header />
         <main>
           <Hero />
@@ -20,8 +20,8 @@ function App() {
           <Projects />
           <Contact />
         </main>
-        <footer className="py-8 text-center text-text-secondary-light dark:text-text-secondary-dark border-t border-gray-200 dark:border-gray-800">
-          <p>&copy; {new Date().getFullYear()} Luis Fernando Prieto Romero. Built with React, Vite & Tailwind CSS.</p>
+        <footer className="py-8 text-center font-mono text-xs text-muted border-t border-border">
+          <p>&copy; {new Date().getFullYear()} Luis Fernando Prieto Romero. Built with React, Vite &amp; Tailwind CSS.</p>
         </footer>
       </div>
     </LanguageProvider>

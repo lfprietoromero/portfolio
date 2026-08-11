@@ -33,24 +33,28 @@ export const Skills = () => {
   return (
     <section className="py-20 px-6">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold text-text-primary-light dark:text-text-primary-dark mb-12 text-center">
+        <p className="font-mono text-xs uppercase tracking-widest text-primary mb-3 text-center">
+          skills/
+        </p>
+        <h2 className="font-display text-3xl md:text-4xl font-semibold text-paper mb-12 text-center">
           {t.skills.title}
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {skillCategories.map((category, index) => (
             <div
               key={index}
-              className="p-6 bg-surface-light dark:bg-surface-dark rounded-lg border border-gray-200 dark:border-gray-800 hover:border-primary-light dark:hover:border-primary-dark transition-all duration-300"
+              className="p-6 bg-surface rounded-lg border border-border hover:border-primary transition-all duration-300"
             >
-              <h3 className="text-xl font-semibold text-text-primary-light dark:text-text-primary-dark mb-4">
+              <h3 className="font-display text-lg font-semibold text-paper mb-4">
+                <span className="text-ember">// </span>
                 {category.title}
               </h3>
               <div className="flex flex-wrap gap-2">
                 {category.skills.map((skill, skillIndex) => (
                   <span
                     key={skillIndex}
-                    className="px-3 py-1 bg-primary-light/10 dark:bg-primary-dark/10 text-primary-light dark:text-primary-dark rounded-full text-sm font-medium"
+                    className="px-3 py-1 bg-primary/10 text-primary rounded-full font-mono text-xs"
                   >
                     {skill}
                   </span>

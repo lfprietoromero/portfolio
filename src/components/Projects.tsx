@@ -6,21 +6,24 @@ export const Projects = () => {
   return (
     <section id="projects" className="py-20 px-6">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold text-text-primary-light dark:text-text-primary-dark mb-12 text-center">
+        <p className="font-mono text-xs uppercase tracking-widest text-primary mb-3 text-center">
+          projects/
+        </p>
+        <h2 className="font-display text-3xl md:text-4xl font-semibold text-paper mb-12 text-center">
           {t.projects.title}
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-md mx-auto lg:max-w-6xl">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-md mx-auto lg:max-w-6xl">
           {t.projects.items.map((project, index) => (
             <div
               key={index}
-              className="p-6 bg-surface-light dark:bg-surface-dark rounded-lg border border-gray-200 dark:border-gray-800 hover:border-primary-light dark:hover:border-primary-dark transition-all duration-300 hover:transform hover:scale-105"
+              className="p-6 bg-surface rounded-lg border border-border hover:border-primary transition-all duration-300 hover:transform hover:scale-105"
             >
-              <h3 className="text-xl font-bold text-text-primary-light dark:text-text-primary-dark mb-3">
+              <h3 className="font-display text-xl font-semibold text-paper mb-3">
                 {project.name}
               </h3>
 
-              <p className="text-text-secondary-light dark:text-text-secondary-dark mb-4">
+              <p className="font-body text-muted mb-4 leading-relaxed">
                 {project.description}
               </p>
 
@@ -29,7 +32,7 @@ export const Projects = () => {
                   {project.technologies.map((tech, techIndex) => (
                     <span
                       key={techIndex}
-                      className="px-2 py-1 bg-primary-light/10 dark:bg-primary-dark/10 text-primary-light dark:text-primary-dark rounded text-xs font-medium"
+                      className="px-2 py-1 bg-primary/10 text-primary rounded font-mono text-xs"
                     >
                       {tech}
                     </span>
@@ -42,7 +45,7 @@ export const Projects = () => {
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center text-primary-light dark:text-primary-dark hover:underline"
+                  className="inline-flex items-center font-mono text-sm text-primary hover:text-ember transition-colors"
                 >
                   View Project
                   <svg
