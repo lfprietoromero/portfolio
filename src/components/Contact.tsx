@@ -47,11 +47,9 @@ export const Contact = () => {
 
   return (
     <section id="contact" className="py-20 px-6 bg-surface border-y border-border">
-      <div className="max-w-4xl mx-auto text-center">
-        <p className="font-mono text-xs uppercase tracking-widest text-primary mb-3">
-          contact/
-        </p>
-        <h2 className="font-display text-3xl md:text-4xl font-semibold text-paper mb-6">
+      <div className="max-w-4xl mx-auto">
+        <h2 className="font-display text-2xl md:text-3xl font-semibold text-ink mb-6">
+          <span className="font-mono text-secondary mr-3">04</span>
           {t.contact.title}
         </h2>
 
@@ -66,12 +64,12 @@ export const Contact = () => {
               href={contact.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-6 bg-background rounded-lg border border-border hover:border-primary transition-all duration-300 hover:transform hover:scale-105"
+              className="p-6 bg-background rounded-lg border border-border hover:border-secondary transition-all duration-300 hover:transform hover:scale-105"
             >
-              <div className="flex justify-center mb-4 text-primary">
+              <div className="flex justify-center mb-4 text-secondary">
                 {contact.icon}
               </div>
-              <h3 className="font-mono text-sm uppercase tracking-wider text-paper">
+              <h3 className="font-mono text-sm uppercase tracking-wider text-ink">
                 {contact.name}
               </h3>
             </a>

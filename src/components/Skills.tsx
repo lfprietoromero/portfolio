@@ -31,12 +31,10 @@ export const Skills = () => {
   ];
 
   return (
-    <section className="py-20 px-6">
+    <section id="skills" className="py-20 px-6">
       <div className="max-w-6xl mx-auto">
-        <p className="font-mono text-xs uppercase tracking-widest text-primary mb-3 text-center">
-          skills/
-        </p>
-        <h2 className="font-display text-3xl md:text-4xl font-semibold text-paper mb-12 text-center">
+        <h2 className="font-display text-2xl md:text-3xl font-semibold text-ink mb-12">
+          <span className="font-mono text-secondary mr-3">03</span>
           {t.skills.title}
         </h2>
 
@@ -44,9 +42,9 @@ export const Skills = () => {
           {skillCategories.map((category, index) => (
             <div
               key={index}
-              className="p-6 bg-surface rounded-lg border border-border hover:border-primary transition-all duration-300"
+              className="p-6 bg-surface rounded-lg border border-border hover:border-secondary transition-all duration-300"
             >
-              <h3 className="font-display text-lg font-semibold text-paper mb-4">
+              <h3 className="font-display text-lg font-semibold text-ink mb-4">
                 <span className="text-ember">// </span>
                 {category.title}
               </h3>
@@ -54,7 +52,7 @@ export const Skills = () => {
                 {category.skills.map((skill, skillIndex) => (
                   <span
                     key={skillIndex}
-                    className="px-3 py-1 bg-primary/10 text-primary rounded-full font-mono text-xs"
+                    className="px-3 py-1 bg-secondary/10 text-secondary rounded-full font-mono text-xs"
                   >
                     {skill}
                   </span>

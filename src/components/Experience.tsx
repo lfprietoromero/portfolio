@@ -6,10 +6,8 @@ export const Experience = () => {
   return (
     <section id="experience" className="py-20 px-6 bg-surface border-y border-border">
       <div className="max-w-4xl mx-auto">
-        <p className="font-mono text-xs uppercase tracking-widest text-primary mb-3 text-center">
-          experience/
-        </p>
-        <h2 className="font-display text-3xl md:text-4xl font-semibold text-paper mb-12 text-center">
+        <h2 className="font-display text-2xl md:text-3xl font-semibold text-ink mb-12">
+          <span className="font-mono text-secondary mr-3">02</span>
           {t.experience.title}
         </h2>
 
@@ -17,15 +15,15 @@ export const Experience = () => {
           {t.experience.jobs.map((job, index) => (
             <div
               key={index}
-              className="relative pl-8 border-l-2 border-primary"
+              className="relative pl-8 border-l-2 border-secondary"
             >
-              <div className="absolute -left-[7px] top-0 w-3 h-3 bg-primary rounded-full"></div>
+              <div className="absolute -left-[7px] top-0 w-3 h-3 bg-secondary rounded-full"></div>
 
               <div className="mb-2">
-                <h3 className="font-display text-xl md:text-2xl font-semibold text-paper">
+                <h3 className="font-display text-xl md:text-2xl font-semibold text-ink">
                   {job.title}
                 </h3>
-                <p className="font-mono text-sm text-primary font-medium">
+                <p className="font-mono text-sm text-secondary font-medium">
                   {job.company}
                 </p>
                 <p className="font-mono text-xs text-muted mt-1">

@@ -11,36 +11,60 @@ export const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center px-6 pt-20">
-      <div className="max-w-4xl mx-auto text-center animate-fade-in">
-        <div className="mb-8 flex justify-center">
-          <span className="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-4 py-1.5 font-mono text-xs uppercase tracking-widest text-muted">
-            <span className="relative flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full animate-pulse-dot rounded-full bg-primary"></span>
-            </span>
-            {t.hero.title}
-          </span>
-        </div>
-
-        <div className="mb-6">
-          <p className="font-mono text-sm md:text-base text-primary mb-3 tracking-wide">
-            {'>'} {t.hero.greeting}
+    <section className="min-h-screen flex items-center px-6 pt-32 pb-16">
+      <div className="max-w-6xl mx-auto grid md:grid-cols-[1.3fr_1fr] gap-12 items-center animate-fade-in">
+        <div>
+          <p className="font-mono text-sm text-secondary mb-4 tracking-wide">
+            {'//'} {t.hero.eyebrow}
           </p>
-          <h1 className="font-display text-5xl md:text-7xl font-semibold text-paper mb-4">
+
+          <h1 className="font-display text-4xl md:text-6xl font-semibold text-ink mb-4 leading-tight">
             Luis Fernando Prieto Romero
           </h1>
+
+          <p className="font-mono text-sm text-muted mb-6">
+            {t.hero.role}
+          </p>
+
+          <p className="font-body text-lg text-muted mb-8 max-w-xl leading-relaxed">
+            {t.hero.subtitle}
+          </p>
+
+          <div className="flex flex-wrap gap-4">
+            <button
+              onClick={scrollToContact}
+              className="px-6 py-3 bg-primary text-background font-mono text-sm uppercase tracking-wider rounded-md font-medium hover:opacity-90 transition-opacity"
+            >
+              {t.hero.cta}
+            </button>
+            <a
+              href="/cv.pdf"
+              download
+              className="px-6 py-3 border border-border text-ink font-mono text-sm uppercase tracking-wider rounded-md font-medium hover:border-primary hover:text-primary transition-colors"
+            >
+              {t.hero.resume}
+            </a>
+          </div>
         </div>
 
-        <p className="font-body text-lg md:text-xl text-muted mb-12 max-w-2xl mx-auto leading-relaxed">
-          {t.hero.subtitle}
-        </p>
-
-        <button
-          onClick={scrollToContact}
-          className="px-8 py-4 bg-primary text-background font-mono text-sm uppercase tracking-wider rounded-lg font-medium hover:bg-primary/90 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-primary/10"
-        >
-          {t.hero.cta}
-        </button>
+        <div className="bg-surface border border-border rounded-lg p-5">
+          <p className="font-mono text-[11px] uppercase tracking-widest text-muted mb-4">
+            {t.hero.stackPanel.title}
+          </p>
+          <ul className="space-y-3">
+            {t.hero.stackPanel.items.map((item, index) => (
+              <li key={index} className="flex items-center justify-between font-mono text-xs">
+                <span className="text-ink">{item}</span>
+                <span className="flex items-center gap-1.5 text-primary">
+                  <span className="relative flex h-1.5 w-1.5">
+                    <span className="absolute inline-flex h-full w-full animate-pulse-dot rounded-full bg-primary"></span>
+                  </span>
+                  {t.hero.stackPanel.status}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </section>
   );

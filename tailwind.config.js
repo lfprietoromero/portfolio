@@ -8,13 +8,14 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#3FB8AF',
-        ember: '#E8A33D',
-        background: '#0B0F14',
-        surface: '#111826',
-        border: '#1E2836',
-        paper: '#F7F7F4',
-        muted: '#8B98A8',
+        primary: 'rgb(var(--color-primary) / <alpha-value>)',
+        secondary: 'rgb(var(--color-secondary) / <alpha-value>)',
+        ember: 'rgb(var(--color-ember) / <alpha-value>)',
+        background: 'rgb(var(--color-background) / <alpha-value>)',
+        surface: 'rgb(var(--color-surface) / <alpha-value>)',
+        border: 'rgb(var(--color-border) / <alpha-value>)',
+        ink: 'rgb(var(--color-ink) / <alpha-value>)',
+        muted: 'rgb(var(--color-muted) / <alpha-value>)',
       },
       fontFamily: {
         display: ['"Space Grotesk"', 'sans-serif'],

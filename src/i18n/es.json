@@ -1,20 +1,45 @@
 {
   "nav": {
-    "about": "Acerca de",
+    "about": "Sobre mí",
     "experience": "Experiencia",
-    "projects": "Proyectos",
+    "skills": "Stack",
     "contact": "Contacto"
+  },
+  "ui": {
+    "darkMode": "Modo oscuro",
+    "lightMode": "Modo claro"
+  },
+  "status": {
+    "available": "Disponible para nuevas oportunidades",
+    "location": "Sevilla",
+    "mode": "Presencial o Remoto"
   },
   "hero": {
     "greeting": "Hola, soy",
     "title": "DevOps",
+    "eyebrow": "perfil",
+    "role": "rol: ingeniero devops · ingeniero de sistemas",
     "subtitle": "Construyendo infraestructura escalable y automatizando el futuro",
-    "cta": "Contáctame"
+    "cta": "Hablemos",
+    "resume": "Descargar CV (PDF)",
+    "stackPanel": {
+      "title": "STACK — ESTADO v2026",
+      "status": "activo",
+      "items": [
+        "Linux (Debian) / Tomcat",
+        "Docker / Docker Compose",
+        "CI/CD Pipelines · Git",
+        "Jira / Trazabilidad",
+        "PL/SQL"
+      ]
+    }
   },
   "about": {
     "title": "Sobre Mí",
     "description": "Profesional DevOps con experiencia en sistemas Linux y entornos productivos, especializado en automatización de despliegues, contenedores y trazabilidad de cambios. Experiencia colaborando con equipos de desarrollo para garantizar estabilidad, calidad y continuidad del servicio mediante prácticas CI/CD.",
-    "mission": "Mi enfoque se centra en la integración continua, la automatización de procesos y el mantenimiento de sistemas críticos, aplicando buenas prácticas orientadas a producción y garantizando la disponibilidad de las aplicaciones en entornos corporativos."
+    "mission": "Mi enfoque se centra en la integración continua, la automatización de procesos y el mantenimiento de sistemas críticos, aplicando buenas prácticas orientadas a producción y garantizando la disponibilidad de las aplicaciones en entornos corporativos.",
+    "focusLabel": "focus:",
+    "focusTags": ["automatización", "integración continua", "mantenimiento de sistemas críticos"]
   },
   "skills": {
     "title": "Habilidades y Tecnologías",
@@ -68,17 +93,6 @@
           "Gestión y verificación de copias de seguridad",
           "Soporte técnico a usuarios y resolución de incidencias de primer nivel"
         ]
-      }
-    ]
-  },
-  "projects": {
-    "title": "Proyectos Destacados",
-    "items": [
-      {
-        "name": "Próximamente",
-        "description": "Estoy trabajando en nuevos proyectos que pronto estarán disponibles aquí.",
-        "technologies": [],
-        "link": ""
       }
     ]
   },
