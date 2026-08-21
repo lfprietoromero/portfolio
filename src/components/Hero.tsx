@@ -1,4 +1,5 @@
 import { useLanguage } from '../contexts/LanguageContext';
+import { Button } from './ui/Button';
 
 export const Hero = () => {
   const { t } = useLanguage();
@@ -11,14 +12,17 @@ export const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center px-6 pt-32 pb-16">
-      <div className="max-w-6xl mx-auto grid md:grid-cols-[1.3fr_1fr] gap-12 items-center animate-fade-in">
+    <section className="relative min-h-screen flex items-center px-6 pt-32 pb-16 overflow-hidden">
+      <div className="absolute inset-0 bg-grid-pattern bg-grid [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,black_10%,transparent_75%)]" />
+      <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-[36rem] h-[36rem] rounded-full bg-primary/10 blur-[120px] animate-float-slow" />
+
+      <div className="relative max-w-6xl mx-auto grid md:grid-cols-[1.3fr_1fr] gap-12 items-center animate-fade-in">
         <div>
           <p className="font-mono text-sm text-secondary mb-4 tracking-wide">
             {'//'} {t.hero.eyebrow}
           </p>
 
-          <h1 className="font-display text-4xl md:text-6xl font-semibold text-ink mb-4 leading-tight">
+          <h1 className="font-display italic text-4xl md:text-6xl font-medium text-ink mb-4 leading-tight text-glow">
             Luis Fernando Prieto Romero
           </h1>
 
@@ -31,30 +35,31 @@ export const Hero = () => {
           </p>
 
           <div className="flex flex-wrap gap-4">
-            <button
-              onClick={scrollToContact}
-              className="px-6 py-3 bg-primary text-background font-mono text-sm uppercase tracking-wider rounded-md font-medium hover:opacity-90 transition-opacity"
-            >
+            <Button variant="primary" onClick={scrollToContact}>
               {t.hero.cta}
-            </button>
-            <a
-              href="/cv.pdf"
-              download
-              className="px-6 py-3 border border-border text-ink font-mono text-sm uppercase tracking-wider rounded-md font-medium hover:border-primary hover:text-primary transition-colors"
-            >
+            </Button>
+            <Button variant="ghost" href="/cv.pdf" download>
               {t.hero.resume}
-            </a>
+            </Button>
           </div>
         </div>
 
-        <div className="bg-surface border border-border rounded-lg p-5">
-          <p className="font-mono text-[11px] uppercase tracking-widest text-muted mb-4">
-            {t.hero.stackPanel.title}
-          </p>
-          <ul className="space-y-3">
+        <div className="glow-border bg-surface border border-border rounded-lg overflow-hidden">
+          <div className="flex items-center gap-1.5 px-4 py-2.5 border-b border-border bg-background/40">
+            <span className="w-2.5 h-2.5 rounded-full bg-[#FF5F56]" />
+            <span className="w-2.5 h-2.5 rounded-full bg-[#FFBD2E]" />
+            <span className="w-2.5 h-2.5 rounded-full bg-[#27C93F]" />
+            <span className="ml-2 font-mono text-[10px] text-muted">
+              {t.hero.stackPanel.title}
+            </span>
+          </div>
+          <ul className="p-5 space-y-3">
             {t.hero.stackPanel.items.map((item, index) => (
               <li key={index} className="flex items-center justify-between font-mono text-xs">
-                <span className="text-ink">{item}</span>
+                <span className="text-ink">
+                  <span className="text-primary mr-1.5">$</span>
+                  {item}
+                </span>
                 <span className="flex items-center gap-1.5 text-primary">
                   <span className="relative flex h-1.5 w-1.5">
                     <span className="absolute inline-flex h-full w-full animate-pulse-dot rounded-full bg-primary"></span>

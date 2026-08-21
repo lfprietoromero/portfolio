@@ -19,7 +19,9 @@ function App() {
           <Contact />
         </main>
         <footer className="py-8 text-center font-mono text-xs text-muted border-t border-border">
-          <p>&copy; {new Date().getFullYear()} Luis Fernando Prieto Romero. Built with React, Vite &amp; Tailwind CSS.</p>
+          <p>
+            <span className="text-primary">$</span> echo &quot;&copy; {new Date().getFullYear()} Luis Fernando Prieto Romero&quot; — built with React, Vite &amp; Tailwind CSS
+          </p>
         </footer>
       </div>
     </LanguageProvider>

@@ -1,4 +1,8 @@
 import { useLanguage } from '../contexts/LanguageContext';
+import { Reveal } from './ui/Reveal';
+import { Card } from './ui/Card';
+import { SectionGlow } from './ui/SectionGlow';
+import { SectionHeading } from './ui/SectionHeading';
 
 export const Contact = () => {
   const { t } = useLanguage();
@@ -46,33 +50,35 @@ export const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 px-6 bg-surface border-y border-border">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="font-display text-2xl md:text-3xl font-semibold text-ink mb-6">
-          <span className="font-mono text-secondary mr-3">04</span>
-          {t.contact.title}
-        </h2>
+    <section id="contact" className="relative py-20 px-6 bg-background border-y border-border overflow-hidden">
+      <SectionGlow accent="secondary" position="bottom-right" />
+      <div className="relative max-w-4xl mx-auto">
+        <Reveal>
+          <SectionHeading number="04" title={t.contact.title} accent="secondary" />
 
-        <p className="font-body text-lg text-muted mb-12">
-          {t.contact.description}
-        </p>
+          <p className="font-body text-lg text-muted mb-12 -mt-6">
+            {t.contact.description}
+          </p>
+        </Reveal>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {contacts.map((contact, index) => (
-            <a
-              key={index}
-              href={contact.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-6 bg-background rounded-lg border border-border hover:border-secondary transition-all duration-300 hover:transform hover:scale-105"
-            >
-              <div className="flex justify-center mb-4 text-secondary">
-                {contact.icon}
-              </div>
-              <h3 className="font-mono text-sm uppercase tracking-wider text-ink">
-                {contact.name}
-              </h3>
-            </a>
+            <Reveal key={index} delayMs={index * 80}>
+              <Card
+                href={contact.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                accent="secondary"
+                className="group flex flex-col items-center gap-4 p-6 text-center hover:-translate-y-1"
+              >
+                <span className="flex items-center justify-center w-12 h-12 rounded-full bg-secondary/20 text-secondary transition-all duration-300 group-hover:bg-secondary/30 group-hover:shadow-[0_0_20px_-4px_rgb(var(--color-secondary)/0.7)]">
+                  {contact.icon}
+                </span>
+                <h3 className="font-mono text-sm uppercase tracking-wider text-ink">
+                  {contact.name}
+                </h3>
+              </Card>
+            </Reveal>
           ))}
         </div>
       </div>

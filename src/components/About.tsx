@@ -1,18 +1,22 @@
 import { useLanguage } from '../contexts/LanguageContext';
+import { Reveal } from './ui/Reveal';
+import { Card } from './ui/Card';
+import { SectionGlow } from './ui/SectionGlow';
+import { SectionHeading } from './ui/SectionHeading';
 
 export const About = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="about" className="py-20 px-6 bg-surface border-y border-border">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="font-display text-2xl md:text-3xl font-semibold text-ink mb-12">
-          <span className="font-mono text-secondary mr-3">01</span>
-          {t.about.title}
-        </h2>
+    <section id="about" className="relative py-20 px-6 bg-surface border-y border-border overflow-hidden">
+      <SectionGlow accent="primary" position="top-right" />
+      <div className="relative max-w-6xl mx-auto">
+        <Reveal>
+          <SectionHeading number="01" title={t.about.title} accent="primary" />
+        </Reveal>
 
         <div className="grid md:grid-cols-[2fr_1fr] gap-10">
-          <div className="space-y-6 text-lg font-body text-muted">
+          <Reveal delayMs={80} className="space-y-6 text-lg font-body text-muted">
             <p className="leading-relaxed">
               {t.about.description}
             </p>
@@ -20,21 +24,26 @@ export const About = () => {
             <p className="leading-relaxed">
               {t.about.mission}
             </p>
-          </div>
+          </Reveal>
 
-          <div className="bg-background border border-border rounded-lg p-5 h-fit">
-            <p className="font-mono text-xs text-muted mb-3">{t.about.focusLabel}</p>
-            <div className="flex flex-wrap gap-2">
-              {t.about.focusTags.map((tag, index) => (
-                <span
-                  key={index}
-                  className="px-3 py-1 bg-primary/10 text-primary rounded-full font-mono text-xs"
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
-          </div>
+          <Reveal delayMs={160}>
+            <Card accent="primary" className="bg-background p-5 h-fit">
+              <p className="font-mono text-xs text-muted mb-3">
+                <span className="text-primary mr-1.5">#</span>
+                {t.about.focusLabel}
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {t.about.focusTags.map((tag, index) => (
+                  <span
+                    key={index}
+                    className="px-3 py-1 bg-primary/20 text-primary rounded-full font-mono text-xs"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </Card>
+          </Reveal>
         </div>
       </div>
     </section>

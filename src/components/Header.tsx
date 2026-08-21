@@ -1,6 +1,7 @@
 import { ThemeToggle } from './ThemeToggle';
 import { LanguageToggle } from './LanguageToggle';
 import { useLanguage } from '../contexts/LanguageContext';
+import { Button } from './ui/Button';
 
 const NAV_ITEMS = [
   { id: 'about', labelKey: 'about' },
@@ -26,9 +27,7 @@ export const Header = () => {
             <span className="relative flex h-1.5 w-1.5">
               <span className="absolute inline-flex h-full w-full animate-pulse-dot rounded-full bg-primary"></span>
             </span>
-            <span>
-              {t.status.available} · {t.status.location} · {t.status.mode}
-            </span>
+            <span>{t.status.available}</span>
           </div>
 
           <div className="flex items-center gap-4">
@@ -40,8 +39,9 @@ export const Header = () => {
 
       <nav className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <div className="font-display text-lg font-semibold text-ink">
-            LFPR
+          <div className="font-mono text-base tracking-wide text-ink">
+            <span className="text-primary">&gt;</span>LFPR
+            <span className="inline-block w-[0.4ch] h-[0.85em] bg-primary ml-0.5 animate-blink-cursor align-middle" />
           </div>
 
           <div className="hidden md:flex items-center gap-6 font-body text-sm">
@@ -49,19 +49,17 @@ export const Header = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-muted hover:text-ink transition-colors"
+                className="group relative text-muted hover:text-ink transition-colors py-1"
               >
                 {t.nav[item.labelKey]}
+                <span className="absolute left-0 -bottom-0.5 h-px w-0 bg-primary transition-all duration-300 group-hover:w-full" />
               </button>
             ))}
           </div>
 
-          <button
-            onClick={() => scrollToSection('contact')}
-            className="px-4 py-2 bg-primary text-background font-mono text-xs uppercase tracking-wider rounded-md font-medium hover:opacity-90 transition-opacity"
-          >
+          <Button variant="primary" className="px-4 py-2 text-xs" onClick={() => scrollToSection('contact')}>
             {t.hero.cta}
-          </button>
+          </Button>
         </div>
       </nav>
     </header>

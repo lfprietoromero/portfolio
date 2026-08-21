@@ -1,23 +1,27 @@
 import { useLanguage } from '../contexts/LanguageContext';
+import { Reveal } from './ui/Reveal';
+import { SectionGlow } from './ui/SectionGlow';
+import { SectionHeading } from './ui/SectionHeading';
 
 export const Experience = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="experience" className="py-20 px-6 bg-surface border-y border-border">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="font-display text-2xl md:text-3xl font-semibold text-ink mb-12">
-          <span className="font-mono text-secondary mr-3">02</span>
-          {t.experience.title}
-        </h2>
+    <section id="experience" className="relative py-20 px-6 bg-background border-y border-border overflow-hidden">
+      <SectionGlow accent="secondary" position="bottom-left" />
+      <div className="relative max-w-4xl mx-auto">
+        <Reveal>
+          <SectionHeading number="02" title={t.experience.title} accent="secondary" />
+        </Reveal>
 
         <div className="space-y-12">
           {t.experience.jobs.map((job, index) => (
-            <div
-              key={index}
-              className="relative pl-8 border-l-2 border-secondary"
-            >
-              <div className="absolute -left-[7px] top-0 w-3 h-3 bg-secondary rounded-full"></div>
+            <Reveal key={index} delayMs={index * 90} className="relative pl-8 border-l-2 border-secondary/40">
+              <div className="absolute -left-[7px] top-0 w-3 h-3 rounded-full bg-secondary">
+                {index === 0 && (
+                  <span className="absolute inset-0 rounded-full bg-secondary animate-ping" />
+                )}
+              </div>
 
               <div className="mb-2">
                 <h3 className="font-display text-xl md:text-2xl font-semibold text-ink">
@@ -46,7 +50,7 @@ export const Experience = () => {
                   </li>
                 ))}
               </ul>
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>

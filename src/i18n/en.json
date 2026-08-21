@@ -10,9 +10,7 @@
     "lightMode": "Light mode"
   },
   "status": {
-    "available": "Available for new opportunities",
-    "location": "Seville",
-    "mode": "On-site or Remote"
+    "available": "Available for new opportunities"
   },
   "hero": {
     "greeting": "Hi, I'm",

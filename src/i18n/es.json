@@ -10,9 +10,7 @@
     "lightMode": "Modo claro"
   },
   "status": {
-    "available": "Disponible para nuevas oportunidades",
-    "location": "Sevilla",
-    "mode": "Presencial o Remoto"
+    "available": "Disponible para nuevas oportunidades"
   },
   "hero": {
     "greeting": "Hola, soy",

@@ -1,4 +1,8 @@
 import { useLanguage } from '../contexts/LanguageContext';
+import { Reveal } from './ui/Reveal';
+import { Card } from './ui/Card';
+import { SectionGlow } from './ui/SectionGlow';
+import { SectionHeading } from './ui/SectionHeading';
 
 export const Skills = () => {
   const { t } = useLanguage();
@@ -31,34 +35,33 @@ export const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-20 px-6">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="font-display text-2xl md:text-3xl font-semibold text-ink mb-12">
-          <span className="font-mono text-secondary mr-3">03</span>
-          {t.skills.title}
-        </h2>
+    <section id="skills" className="relative py-20 px-6 bg-surface border-y border-border overflow-hidden">
+      <SectionGlow accent="primary" position="top-left" />
+      <div className="relative max-w-6xl mx-auto">
+        <Reveal>
+          <SectionHeading number="03" title={t.skills.title} accent="primary" />
+        </Reveal>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {skillCategories.map((category, index) => (
-            <div
-              key={index}
-              className="p-6 bg-surface rounded-lg border border-border hover:border-secondary transition-all duration-300"
-            >
-              <h3 className="font-display text-lg font-semibold text-ink mb-4">
-                <span className="text-ember">// </span>
-                {category.title}
-              </h3>
-              <div className="flex flex-wrap gap-2">
-                {category.skills.map((skill, skillIndex) => (
-                  <span
-                    key={skillIndex}
-                    className="px-3 py-1 bg-secondary/10 text-secondary rounded-full font-mono text-xs"
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
+            <Reveal key={index} delayMs={index * 60}>
+              <Card accent="primary" className="bg-background p-6 h-full">
+                <h3 className="font-display text-lg font-semibold text-ink mb-4">
+                  <span className="text-ember">// </span>
+                  {category.title}
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  {category.skills.map((skill, skillIndex) => (
+                    <span
+                      key={skillIndex}
+                      className="px-3 py-1 bg-primary/20 text-primary rounded-full font-mono text-xs"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </Card>
+            </Reveal>
           ))}
         </div>
       </div>
